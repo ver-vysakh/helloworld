@@ -1,4 +1,4 @@
-<div cols="12">
+<!-- <div cols="12">
   <div cols="6">
     <p>Hi lets start</p>
     <app-googol-map> </app-googol-map>
@@ -6,5 +6,12 @@
   <div cols="6" class="map">
     <app-googol-map> </app-googol-map>
   </div>
-</div>
-<!-- <router-outlet></router-outlet>s -->
+</div> -->
+<div class="col-sm-4" *ngIf="showButton">
+    <button type="button" class="btn btn-success" (click)="loadMap()">get</button>
+  </div>
+  <div class="col-sm-4">
+      <button type="button" class="btn btn-success" (click)="loadMyModule()">loadMyModule</button>
+    </div>
+<router-outlet>
+</router-outlet>

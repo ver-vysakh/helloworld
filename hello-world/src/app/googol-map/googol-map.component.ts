@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Http } from '@angular/http';
+import 'rxjs/add/operator/map';
+
 import { AgmMap, AgmMarker } from '@agm/core';
 import { ActivatedRoute, Router } from '@angular/router';
 
@@ -10,10 +13,17 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class GoogolMapComponent implements OnInit {
   public lat: number = 51.678418;
   public lng: number = 7.809007;
-  constructor() { }
+  constructor(
+    private http: Http
+  ) { }
 
   ngOnInit() {
 
-  }
+   }
 
+ public getAll() {
+   this.http.get('https://demo9467441.mockable.io/get').toPromise().then(res=> {
+     console.log(res.json());
+   })
+ }
 }

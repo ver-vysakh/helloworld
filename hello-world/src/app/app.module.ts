@@ -6,6 +6,8 @@ import { AgmCoreModule } from '@agm/core';
 
 import { AppComponent } from './app.component';
 import { GoogolMapComponent } from './googol-map/googol-map.component';
+import { AppRoutingModule } from './app.routing';
+import { MyModuleModule } from './my-module/my-module.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { GoogolMapComponent } from './googol-map/googol-map.component';
     HttpModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCn0GypF7OdHGz5iAOoAKdoVYvRviGA2jM'
-    })
+    }),
+    AppRoutingModule,
+    MyModuleModule,
   ],
 
   providers: [],

@@ -1,8 +1,17 @@
 
+import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { GoogolMapComponent } from './googol-map/googol-map.component';
 
-const appRoutes: Routes = [{ path: 'map', component: GoogolMapComponent }
+import { AppCustomPreloader } from './app-routing-loader';
+
+const appRoutes: Routes = [{ path: 'map', component: GoogolMapComponent },
+{path: 'forms', loadChildren: './my-module/my-module.module#MyModuleModule', data: { preload: true }}
 ];
 
-export const Routing = RouterModule.forRoot(appRoutes);
+@NgModule({
+  imports: [RouterModule.forRoot(appRoutes, { preloadingStrategy: AppCustomPreloader })], // Using our own custom preloader
+  exports: [RouterModule],
+  providers: [AppCustomPreloader]
+})
+export class AppRoutingModule { }

@@ -1,5 +1,10 @@
-<div>
-  <agm-map [latitude]="lat" [longitude]="lng">
-    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
-  </agm-map>
+<div class="row">
+  <div class="col-sm-4">
+    <button type="button" class="btn btn-success" (click)="getAll()">getAll</button>
+  </div>
+  <div class="col-sm-4">
+    <agm-map [latitude]="lat" [longitude]="lng">
+    </agm-map>
+  </div>
+  <div class="col-sm-4"></div>
 </div>
