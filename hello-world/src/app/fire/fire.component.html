@@ -1,0 +1,7 @@
+<ul>
+  <li *ngFor="let item of items | async">
+    {{ item.name }}
+  </li>
+</ul>
+<button (click)="addItem()"> add</button>
+<button (click)="filterBySize('2')">id</button>

@@ -11,11 +11,11 @@ export class AppComponent {
   public showButton: any = true;
   constructor(
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.showButton = true;
-   }
+  }
 
   public loadMap() {
     this.showButton = false;
@@ -26,6 +26,11 @@ export class AppComponent {
   public loadMyModule() {
     this.showButton = false;
     this.router.navigate(['my-form']);
+  }
+
+  public loadFire() {
+    this.showButton = false;
+    this.router.navigate(['fire']);
   }
 }
 

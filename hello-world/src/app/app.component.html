@@ -7,11 +7,32 @@
     <app-googol-map> </app-googol-map>
   </div>
 </div> -->
-<div class="col-sm-4" *ngIf="showButton">
+<!-- <div class="col-sm-4" *ngIf="showButton">
     <button type="button" class="btn btn-success" (click)="loadMap()">get</button>
   </div>
   <div class="col-sm-4">
       <button type="button" class="btn btn-success" (click)="loadMyModule()">loadMyModule</button>
     </div>
+    <div class="col-sm-4">
+      <button type="button" class="btn btn-success" (click)="loadFire()">loadFire</button>
+    </div>
+<router-outlet>
+</router-outlet> -->
+<ul>
+  <li>
+    <a routerLink="map">Map</a>
+  </li>
+  <li>
+    <a routerLink="fire">Firebase</a>
+  </li>
+  <li class="dropdown">
+    <a class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </li>
+</ul>
 <router-outlet>
 </router-outlet>
