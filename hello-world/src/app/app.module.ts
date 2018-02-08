@@ -5,7 +5,7 @@ import { HttpModule } from '@angular/http';
 import { AgmCoreModule } from '@agm/core';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-
+import { AngularFireAuthModule, AngularFireAuth } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import { GoogolMapComponent } from './googol-map/googol-map.component';
 import { AppRoutingModule } from './app.routing';
@@ -28,6 +28,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     MyModuleModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
     AngularFirestoreModule
   ],
 

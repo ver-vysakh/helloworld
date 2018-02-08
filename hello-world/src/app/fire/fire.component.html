@@ -3,5 +3,46 @@
     {{ item.name }}
   </li>
 </ul>
-<button (click)="addItem()"> add</button>
-<button (click)="filterBySize('2')">id</button>
+<button (click)="addItem()"> add new item</button>
+<button (click)="filterBySize('2')">get by id</button>
+
+<div *ngIf="afAuth.authState | async as user; else showLogin">
+  <h1>Hello {{ user.name }}!</h1>
+  <button (click)="logout()">Logout</button>
+</div>
+<ng-template #showLogin>
+  <p>Please login.</p>
+  <button (click)="signInWithPopup()">Login with Google</button>
+</ng-template>
+<div class="col-sm-4">
+  <form>
+    <fieldset>
+      <legend>Signup:</legend>
+      Email:
+      <br>
+      <input type="text" id="firstname" #firstname>
+      <br> Password:
+      <br>
+      <input type="text" name="lastname" #lastname>
+      <br>
+      <br>
+      <button type="button" (click)="signUp(firstname.value, lastname.value)">signUp</button>
+    </fieldset>
+  </form>
+</div>
+<div class="col-sm-4">
+  <form>
+    <fieldset>
+      <legend>Login</legend>
+      Email:
+      <br>
+      <input type="text" id="firstname" #firstname>
+      <br> Password:
+      <br>
+      <input type="text" name="lastname" #lastname>
+      <br>
+      <br>
+      <button type="button" (click)="login(firstname.value, lastname.value)">login</button>
+    </fieldset>
+  </form>
+</div>
