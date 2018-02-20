@@ -12,11 +12,15 @@ import { AppRoutingModule } from './app.routing';
 import { MyModuleModule } from './my-module/my-module.module';
 import { FireComponent } from './fire/fire.component';
 import { environment } from '../environments/environment';
+import { DirectiveExamplesComponent } from './directive-examples/directive-examples.component';
+import { HighlightDirective } from './highlight.directive';
 @NgModule({
   declarations: [
     AppComponent,
     GoogolMapComponent,
-    FireComponent
+    FireComponent,
+    DirectiveExamplesComponent,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
