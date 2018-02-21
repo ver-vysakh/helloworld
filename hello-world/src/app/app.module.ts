@@ -14,13 +14,15 @@ import { FireComponent } from './fire/fire.component';
 import { environment } from '../environments/environment';
 import { DirectiveExamplesComponent } from './directive-examples/directive-examples.component';
 import { HighlightDirective } from './highlight.directive';
+import { MyButtonComponentComponent } from './my-button-component/my-button-component.component';
 @NgModule({
   declarations: [
     AppComponent,
     GoogolMapComponent,
     FireComponent,
     DirectiveExamplesComponent,
-    HighlightDirective
+    HighlightDirective,
+    MyButtonComponentComponent
   ],
   imports: [
     BrowserModule,
